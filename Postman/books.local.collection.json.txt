@@ -238,7 +238,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "https://9knw8u1ff8.execute-api.us-east-1.amazonaws.com/Prod/"
+      "value": "https://localhost:61824/"
     },
     {
       "key": "bookId",
