@@ -1,0 +1,17 @@
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Infrastructure.deps.json
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Infrastructure.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Infrastructure.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Application.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Domain.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Application.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\bin\Debug\net8.0\BooksCatalog.Domain.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.AssemblyInfo.cs
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCat.1E494226.Up2Date
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\refint\BooksCatalog.Infrastructure.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\BooksCatalog.Infrastructure.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Infrastructure\obj\Debug\net8.0\ref\BooksCatalog.Infrastructure.dll

@@ -1,0 +1,252 @@
+{
+  "info": {
+    "name": "BooksCatalog API - LOCAL",
+    "_postman_id": "b9f1b7d3-aaaa-bbbb-cccc-123456789000",
+    "description": "Colección para validar la API REST BooksCatalog (CRUD de libros). Usa {{baseUrl}} como URL base.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Books - List (paged) GET /api/books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books?search=&category=&pageNumber=1&pageSize=10",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "books"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": ""
+            },
+            {
+              "key": "category",
+              "value": ""
+            },
+            {
+              "key": "pageNumber",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Response has paging fields\", function () {",
+              "    var json = pm.response.json();",
+              "    pm.expect(json).to.have.property(\"items\");",
+              "    pm.expect(json).to.have.property(\"pageNumber\");",
+              "    pm.expect(json).to.have.property(\"pageSize\");",
+              "    pm.expect(json).to.have.property(\"totalItems\");",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books - Create POST /api/books",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Clean Architecture\",\n  \"author\": \"Robert C. Martin\",\n  \"publicationYear\": 2017,\n  \"publisher\": \"Pearson\",\n  \"pageCount\": 432,\n  \"category\": \"Software Engineering\",\n  \"isbn\": \"9780134494166\",\n  \"language\": \"en\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/books",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "var json = pm.response.json();",
+              "",
+              "pm.test(\"Response has id\", function () {",
+              "    pm.expect(json).to.have.property(\"id\");",
+              "});",
+              "",
+              "// Guardamos id y version en variables de colección para futuros requests",
+              "if (json && json.id) {",
+              "    pm.collectionVariables.set(\"bookId\", json.id);",
+              "}",
+              "if (json && json.version !== undefined && json.version !== null) {",
+              "    pm.collectionVariables.set(\"bookVersion\", json.version);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books - Get by Id GET /api/books/:id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "var json = pm.response.json();",
+              "",
+              "pm.test(\"Ids match\", function () {",
+              "    var expectedId = pm.collectionVariables.get(\"bookId\");",
+              "    pm.expect(json.id).to.eql(expectedId);",
+              "});",
+              "",
+              "// Actualizamos version por si cambió",
+              "if (json && json.version !== undefined && json.version !== null) {",
+              "    pm.collectionVariables.set(\"bookVersion\", json.version);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books - Update PUT /api/books/:id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Clean Architecture (Updated)\",\n  \"author\": \"Robert C. Martin\",\n  \"publicationYear\": 2018,\n  \"publisher\": \"Pearson\",\n  \"pageCount\": 450,\n  \"category\": \"Software Engineering\",\n  \"isbn\": \"9780134494166\",\n  \"language\": \"en\",\n  \"version\": {{bookVersion}}\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 204\", function () {",
+              "    pm.response.to.have.status(204);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books - Delete DELETE /api/books/:id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/books/{{bookId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "books",
+            "{{bookId}}"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 204\", function () {",
+              "    pm.response.to.have.status(204);",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://9knw8u1ff8.execute-api.us-east-1.amazonaws.com/Prod/"
+    },
+    {
+      "key": "bookId",
+      "value": ""
+    },
+    {
+      "key": "bookVersion",
+      "value": "1"
+    }
+  ]
+}

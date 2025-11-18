@@ -1,0 +1,50 @@
+## Build artefacts
+bin/
+obj/
+**/bin/
+**/obj/
+[Bb]uild/
+[Ll]og/
+logs/
+*.log
+
+## Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider / JetBrains
+.idea/
+
+## Test / coverage
+TestResults/
+*.coverage
+*.coveragexml
+*.ncrunch*
+*.ncrunchsolution
+
+## NuGet
+*.nupkg
+packages/
+.nuget/
+project.lock.json
+
+## Publish / Lambda packaging
+**/publish/
+.cloudformation/
+cloudformation-template-*.json
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Secrets (no subir appsettings locales)
+appsettings.Development.json
+appsettings.Local.json
+*.secret.json
+.env
+*.pem
+*.pfx

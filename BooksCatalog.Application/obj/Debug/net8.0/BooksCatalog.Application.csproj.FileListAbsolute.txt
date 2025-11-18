@@ -1,0 +1,15 @@
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\bin\Debug\net8.0\BooksCatalog.Application.deps.json
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\bin\Debug\net8.0\BooksCatalog.Application.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\bin\Debug\net8.0\BooksCatalog.Application.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\bin\Debug\net8.0\BooksCatalog.Domain.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\bin\Debug\net8.0\BooksCatalog.Domain.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.csproj.AssemblyReference.cache
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.AssemblyInfoInputs.cache
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.AssemblyInfo.cs
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.csproj.CoreCompileInputs.cache
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCat.F08CA1FE.Up2Date
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\refint\BooksCatalog.Application.dll
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\BooksCatalog.Application.pdb
+C:\Users\Joel\Desktop\Joel\BooksCatalog\BooksCatalog.Application\obj\Debug\net8.0\ref\BooksCatalog.Application.dll
